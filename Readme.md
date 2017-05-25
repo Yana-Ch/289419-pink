@@ -1,8 +1,8 @@
 ﻿# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Яна Чешкина] (https://up.htmlacademy.ru/adaptive/11/user/289419).
+* Студент: [Яна Чешкина](https://up.htmlacademy.ru/adaptive/11/user/289419).
 * Наставник: 
-[Михаил Косымов] (https://htmlacademy.ru/profile/grraoo).*
+[Михаил Косымов](https://htmlacademy.ru/profile/grraoo)
 ---
 
 **Обратите внимание на файлы:**
