@@ -7,7 +7,10 @@
 <body>
 <header class="page-header">
   <nav class="main-nav">
-    <div class="page-header__logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></div>
+    <div class="page-header__logo">
+      <a href="index.html">
+        <img src="http://placehold.it/75x22" alt="Logo" width="75" height="22">
+    </div>
     <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
     <ul class="main-nav__list">
       <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
@@ -19,41 +22,24 @@
 </header>
 
 <main>
-  <div class="intro">
-    <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    <p class="intro__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+  <div class="contest">
+    <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
   </div>
-  <form class="main-form main-form__wrapper" method="post" action="https://echo.htmlacademy.ru/">
-    <div class="main-form__info">
-      <label for="surname">Фамилия:</label>
-      <input type="text" id="surname" placeholder="Укажите фамилию *" required>
-      <label for="name">Имя:</label>
-      <input type="text" id="name" placeholder="Введите ваше имя *" required>
-      <label for="second-name">Отчество:</label>
-      <input type="text" id="second-name" placeholder="Ну и отчество тоже *" required>
-    </div>
 
-    <div class="main-form__apps">
-      <div class="main-form__apps-text">С каким приложением путешествовали?</div>
-      <label for="ios">Pink для iOS</label>
-      <input type="radio" id="ios">
-      <label for="android">Pink на Android</label>
-      <input type="radio" id="android">
-      <label for="wp">Windows Phone</label>
-      <input type="radio" id="wp">
-    </div>
+  <form class="main-form" method="post" action="https://echo.htmlacademy.ru/">
+    <fieldset class="main-form__user-data">
+      <div class="main-form__info">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" placeholder="Укажите фамилию *" required>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите ваше имя *" required>
+        <label for="second-name">Отчество:</label>
+        <input type="text" id="second-name" placeholder="Ну и отчество тоже *" required>
+      </div>
+    </fieldset>
 
-    <div class="main-form__contacts">
-      <div class="main-form__contacts-text">Контактная информация</div>
-      <label for="phone">Номер телефона</label>
-      <input type="text" id="phone" placeholder="Номер, пожалуйста">
-      <button class="main-form__contacts-btn" type="button" title="Телефон">Телефон</button>
-      <label for="mail">Адрес почты</label>
-      <input type="text" id="mail" placeholder="Введите почту *" required>
-      <button class="main-form__contacts-btn" type="button" title="Почта">Почта</button>
-    </div>
-
-    <div class="main-form__achievements">
+    <fieldset class="main-form__achievements">
       <div class="main-form__achievements-text">Ваши безбашенные достижения в путешествии</div>
       <label for="shark">Сделал селфи с акулой</label>
       <input type="checkbox" id="shark" checked>
@@ -67,30 +53,53 @@
       <input type="checkbox" id="tower" checked>
       <label for="hotel">Разгромил отель</label>
       <input type="checkbox" id="hotel">
-    </div>
+    </fieldset>
+
+    <fieldset class="main-form__contacts">
+      <div class="main-form__field">
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+      </div>
+      <div class="main-form__field">
+        <label for="your-email">адрес почты</label>
+        <input type="email" id="your-email" name="your-email" placeholder="Введите почту *" required>
+      </div>
+    </fieldset>
+
+    <fieldset class="main-form__apps">
+      <div class="main-form__apps-text">С каким приложением путешествовали?</div>
+      <label for="ios">Pink для iOS</label>
+      <input type="tel" id="ios">
+      <label for="android">Pink на Android</label>
+      <input type="tel" id="android">
+      <label for="wp">Windows Phone</label>
+      <input type="tel" id="wp">
+    </fieldset>
 
     <div class="main-form__emotions">
-      <div class="main-form__emotions-text">Опишите свои эмоции</div>
-      <label for="emotions">Эмоции</label>
-      <input type="text" id="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях">
+      <label for="main-form__emotions-text">Опишите свои эмоции</label>
+      <textarea name="main-form__emotions-descr" id="main-form__emotions-text"
+                placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
     </div>
     <input class="main-form__btn" type="submit" value="Отправить форму">
-    <div class="main-note"><span>*</span> - Обязательные для заполнения поля</div>
+    <div class="main-note"><span>*</span> - Обязательные для заполнения поля
+    </div>
   </form>
 </main>
 
+
 <footer class="main-footer">
-  <div class="logo logo--picture">
+  <div class="main-footer__logo">
     <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
   </div>
   <div class="social-links">
-    <a href="#" class="social-btn social-twitter">Twitter</a>
-    <a href="#" class="social-btn social-facebook">Facebook</a>
-    <a href="#" class="social-btn social-youtube">Youtube</a>
+    <a href="#" class="social-link--twitter">Twitter</a>
+    <a href="#" class="social-link--facebook">Facebook</a>
+    <a href="#" class="social-link--twitter">Youtube</a>
   </div>
   <div class="copyright">
     <b>Разработано</b>
-    <img src="http://placehold.it/28x35" alt="Лого Html Academ">
+    <img src="http://placehold.it/28x35" alt="Лого Html Academy">
   </div>
 </footer>
 </body>
