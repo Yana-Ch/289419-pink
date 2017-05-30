@@ -7,12 +7,15 @@
 <body>
 <header class="page-header">
   <nav class="main-nav">
-    <div class="page-header__logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></div>
+    <div class="page-header__logo">
+      <a href="index.html">
+        <img src="http://placehold.it/75x22" alt="Logo" width="75" height="22">
+    </div>
     <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
     <ul class="main-nav__list">
       <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
-      <li class="main-nav__item"><a href="#">Фотографии</a></li>
-      <li class="main-nav__item"><a href="#">Конкурс</a></li>
+      <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+      <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
       <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
     </ul>
   </nav>
@@ -20,7 +23,6 @@
 
 <main>
   <div class="download">
-    <img class="download__img" src="http://placehold.it/320x461" alt="Pink intro" width="320" height="461">
     <a href="#" class="btn btn--download">Скачать приложение</a>
     <div class="logo-download">
       <a class="logo-download__link logo-download__link--apple" href="#"><img src="http://placehold.it/49x55" alt="Apple-logo" width="49" height="55"></a>
@@ -46,7 +48,6 @@
         <h3 class="advantages-text__title">Заводит новых друзей</h3>
         <p class="advantages-text__paragraph">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
       </div>
-      <img src="http://placehold.it/156x280" alt="smile" width="156" height="280">
     </div>
   </div>
 
@@ -101,17 +102,20 @@
   <div class="contacts">
     <h2 class="contacts__intro">Остались вопросы? Свяжитесь с нами!</h2>
     <h3 class="contacts__title">Звоните:</h3>
-    <a href="tel:+78125556666" class="contacts__text contacts__text--red">+7 (812) 555-66-66</a>
+    <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
     <h3 class="contacts__title">Пишите:</h3>
-    <a href="mailto:mail@htmlacademy.ru" class="contacts__text contacts__text--red">mail@htmlacademy.ru</a>
+    <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
     <h3 class="contacts__title">Приезжайте в гости:</h3>
-    <p class="contacts__text contacts__text--red">ул. Большая Конюшенная, 19/8</p>
-  </div>
-  <div class="contacts__map">
+    <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
   </div>
 </main>
 
 <footer class="main-footer">
+  <div class="contacts__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6237753697812!2d30.320710865804!3d59.93838483187604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCAxOS84LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsw!5e0!3m2!1sen!2sru!4v1496151127617"
+      width="320" height="200" frameborder="0"></iframe>
+  </div>
 </footer>
 </body>
 </html>
