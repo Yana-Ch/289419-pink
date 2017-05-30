@@ -7,12 +7,15 @@
 <body>
 <header class="page-header">
   <nav class="main-nav">
-    <div class="page-header__logo"><img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></div>
+    <div class="page-header__logo">
+      <a href="index.html">
+        <img src="http://placehold.it/75x22" alt="Logo" width="75" height="22">
+    </div>
     <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
     <ul class="main-nav__list">
       <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
-      <li class="main-nav__item"><a href="#">Фотографии</a></li>
-      <li class="main-nav__item"><a href="#">Конкурс</a></li>
+      <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+      <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
       <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
     </ul>
   </nav>
@@ -21,7 +24,7 @@
 
   <section class="gallery">
     <h1 class="gallery__title">Фотографии пользователей</h1>
-    <p class="intro__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    <p class="gallery_text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
   </section>
 
   <section class="photos-page">
@@ -35,7 +38,7 @@
       <div class="users-photos__info users-photos__info--panorama">
         <p class="users-photos__name">Анна</p>
         <p class="users-photos__time">(5 минут назад)</p>
-        <p class="users-photos__descr">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+        <p class="users-photos__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         <div class="users-photos__likes">
           <span class="users-photos__likes-icon"></span>
           <span class="users-photos__likes-sum">Нравится: 215</span>
@@ -49,7 +52,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Левон</p>
           <p class="users-photos__time">(5 часов назад)</p>
-          <p class="users-photos__descr">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <p class="users-photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 356</span>
@@ -64,7 +67,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Антон</p>
           <p class="users-photos__time">(12 часов назад)</p>
-          <p class="users-photos__descr">Соседи будут рады!</p>
+          <p class="users-photos__text">Соседи будут рады!</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 666</span>
@@ -79,7 +82,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Борис</p>
           <p class="users-photos__time">(20 часов назад)</p>
-          <p class="users-photos__descr">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <p class="users-photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 215</span>
@@ -94,7 +97,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Сергей</p>
           <p class="users-photos__time">(25 часов назад)</p>
-          <p class="users-photos__descr">Самая кубанская в мире!</p>
+          <p class="users-photos__text">Самая кубанская в мире!</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 4</span>
@@ -109,7 +112,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Максим</p>
           <p class="users-photos__time">(40 часов назад)</p>
-          <p class="users-photos__descr">Где снег-то?</p>
+          <p class="users-photos__text">Где снег-то?</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 150</span>
@@ -124,7 +127,7 @@
         <div class="users-photos__info">
           <p class="users-photos__name">Надежда</p>
           <p class="users-photos__time">(45 часов назад)</p>
-          <p class="users-photos__descr">Всем GM и взаимные лайки!</p>
+          <p class="users-photos__text">Всем GM и взаимные лайки!</p>
           <div class="users-photos__likes">
             <span class="users-photos__likes-icon"></span>
             <span class="users-photos__likes-sum">Нравится: 2560</span>
@@ -132,8 +135,9 @@
         </div>
       </div>
     </div>
-    <div class="intro-block__descr">
-      <p class="intro-block__descr-text">
+
+    <div class="photo-posting">
+      <p class="photo-posting__slogan">
         Затмите их всех!
         Выкладывайте все, что накопилось в телефоне!</p>
     </div>
@@ -144,12 +148,12 @@
       <div class="photo-editor__wrapper">
         <div class="photo-editor__photo"><img src="http://placehold.it/280x373"></div>
         <div class="photo-editor__settings">
-          <div class="photo-editor__crop-settings"><img src="http://placehold.it/18x14"></div>
-          <div class="photo-editor__fill-settings"><img src="http://placehold.it/18x14"></div>
-          <div class="photo-editor__contrast-settings"><img src="http://placehold.it/18x14"></div>
+          <div class="photo-editor__settings--crop--active"></div>
+          <div class="photo-editor__settings--fill--active"></div>
+          <div class="photo-editor__settings--contrast--active"></div>
         </div>
         <input type="range" name="scale" class="photo-editor__scale">
-        <button class="photo-editor__btn  btn" name="photo-editor-send" type="submit"
+        <button class="photo-editor__btn--pink" name="photo-editor-send" type="submit"
                 formaction="https://echo.htmlacademy.ru/">Запостить
         </button>
         <button class="photo-editor__btn  btn" type="reset" name="photo-editor-cancel">Отмена</button>
@@ -159,13 +163,13 @@
 </main>
 
 <footer class="main-footer">
-  <div class="logo logo--picture">
+  <div class="main-footer__logo">
     <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
   </div>
   <div class="social-links">
-    <a href="#" class="social-btn social-twitter">Twitter</a>
-    <a href="#" class="social-btn social-facebook">Facebook</a>
-    <a href="#" class="social-btn social-youtube">Youtube</a>
+    <a href="#" class="social-link--twitter">Twitter</a>
+    <a href="#" class="social-link--facebook">Facebook</a>
+    <a href="#" class="social-link--twitter">Youtube</a>
   </div>
   <div class="copyright">
     <b>Разработано</b>
