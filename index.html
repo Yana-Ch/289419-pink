@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+<body>
+<header class="page-header">
+  <nav class="main-nav">
+    <div class="page-header__logo">
+      <a href="index.html">
+        <img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+    </div>
+    <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
+    <ul class="main-nav__list">
+      <li class="main-nav__item main-nav__item--active"><a href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+      <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+      <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+<main>
+  <div class="download">
+    <a href="#" class="btn btn--download">Скачать приложение</a>
+    <div class="logo-download">
+      <a class="logo-download__link logo-download__link--apple" href="https://www.apple.com/itunes/"></a>
+      <a class="logo-download__link logo-download__link--android" href="https://play.google.com/"></a>
+      <a class="logo-download__link logo-download__link--microsoft" href="https://www.microsoft.com/store/apps/windows-phone"></a>
+      <p class="logo-download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </div>
+  </div>
 
-  </body>
+  <div class="advantages">
+    <h2 class="advantages__question">Устали от серости мегаполиса?</h2>
+    <h2 class="advantages__question">Нам есть, что вам предложить!</h2>
+    <div class="advantages-benefits">
+      <div class="advantages-text">
+        <h3 class="advantages-text__title">Поднимает настроение</h3>
+        <p class="advantages-text__paragraph">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      </div>
+      <div class="advantages-text">
+        <h3 class="advantages-text__title">Меняет мир вокруг</h3>
+        <p class="advantages-text__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="advantages-text">
+        <h3 class="advantages-text__title">Заводит новых друзей</h3>
+        <p class="advantages-text__paragraph">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews">
+    <div class="reviews-text">
+      <h3 class="reviews-text__title">Николай Петров</h3>
+      <p class="reviews-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    </div>
+    <div class="reviews-text">
+      <h3 class="reviews-text__title">Николай Петров</h3>
+      <p class="reviews-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    </div>
+    <div class="reviews-text">
+      <h3 class="reviews-text__title">Николай Петров</h3>
+      <p class="reviews-text__paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    </div>
+    <div class="pagination">
+      <div class="pagination__page pagination__page--active">1</div>
+      <div class="pagination__page">2</div>
+      <div class="pagination__page">3</div>
+    </div>
+  </div>
+
+  <div class="prices">
+    <div class="pricing-taxes">
+      <div class="pricing-taxes__col">
+        <div class="pricing-taxes__title">База<span class="pricing-taxes__price">1,99 USD</span></div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Розовый фильтр</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--no">Смайлики</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--no">Комментарии</div>
+      </div>
+      <div class="pricing-taxes__col">
+        <div class="pricing-taxes__title pricing-taxes__title--hit">Стандарт<span class="pricing-taxes__price">3,99 USD</span></div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Розовый фильтр</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Смайлики</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--no">Комментарии</div>
+      </div>
+      <div class="pricing-taxes__col">
+        <div class="pricing-taxes__title">Анлим<span class="pricing-taxes__price">9,99 USD</span></div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Розовый фильтр</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Смайлики</div>
+        <div class="pricing-taxes__cell pricing-taxes__cell--yes">Комментарии</div>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="pagination__page">1</div>
+      <div class="pagination__page pagination__page--active">2</div>
+      <div class="pagination__page">3</div>
+    </div>
+  </div>
+</main>
+
+<footer class="main-footer">
+  <div class="contacts">
+    <h2 class="contacts__intro">Остались вопросы? Свяжитесь с нами!</h2>
+    <h3 class="contacts__title">Звоните:</h3>
+    <a href="tel:+78125556666" class="contacts__text">+7 (812) 555-66-66</a>
+    <h3 class="contacts__title">Пишите:</h3>
+    <a href="mailto:mail@htmlacademy.ru" class="contacts__text">mail@htmlacademy.ru</a>
+    <h3 class="contacts__title">Приезжайте в гости:</h3>
+    <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+  </div>
+  <div class="contacts__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1998.6237753697812!2d30.320710865804!3d59.93838483187604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCAxOS84LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsw!5e0!3m2!1sen!2sru!4v1496151127617"
+      width="320" height="200" frameborder="0"></iframe>
+  </div>
+</footer>
+</body>
 </html>
