@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
   <nav class="main-nav">
     <div class="page-header__logo">
       <a href="index.html">
-        <img src="http://placehold.it/75x22" alt="Logo" width="75" height="22"></a>
+        <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
     </div>
     <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
     <ul class="main-nav__list">
@@ -24,34 +25,34 @@
 <main>
   <div class="contest">
     <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
   </div>
 
   <form class="main-form" method="post" action="https://echo.htmlacademy.ru/">
     <fieldset class="main-form__user-data">
       <div class="main-form__info">
-        <label for="surname">Фамилия:</label>
-        <input type="text" id="surname" placeholder="Укажите фамилию *" required>
-        <label for="name">Имя:</label>
-        <input type="text" id="name" placeholder="Введите ваше имя *" required>
-        <label for="second-name">Отчество:</label>
-        <input type="text" id="second-name" placeholder="Ну и отчество тоже *" required>
+        <h2 class="main-form__descr">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
+        <label for="surname" class="main-form__full-name">Фамилия:</label>
+        <input type="text" class="main-form__input" id="surname" placeholder="Укажите фамилию *" required>
+        <label for="name" class="main-form__full-name">Имя:</label>
+        <input type="text" class="main-form__input" id="name" placeholder="Введите ваше имя *" required>
+        <label for="second-name" class="main-form__full-name">Отчество:</label>
+        <input type="text" class="main-form__input" id="second-name" placeholder="Ну и отчество тоже *" required>
       </div>
     </fieldset>
 
     <fieldset class="main-form__achievements">
       <div class="main-form__achievements-text">Ваши безбашенные достижения в путешествии</div>
-      <label for="shark">Сделал селфи с акулой</label>
+      <label for="shark" class="main-form__label">Сделал селфи с акулой</label>
       <input type="checkbox" id="shark" checked>
-      <label for="beach">Обгорел на пляже</label>
+      <label for="beach" class="main-form__label">Обгорел на пляже</label>
       <input type="checkbox" id="beach" checked>
-      <label for="chuck">Видел Чака Норриса</label>
+      <label for="chuck" class="main-form__label">Видел Чака Норриса</label>
       <input type="checkbox" id="chuck">
-      <label for="souvenir">Накупил сувениров</label>
+      <label for="souvenir" class="main-form__label">Накупил сувениров</label>
       <input type="checkbox" id="souvenir">
-      <label for="tower">Удержал башню</label>
+      <label for="tower" class="main-form__label">Удержал башню</label>
       <input type="checkbox" id="tower" checked>
-      <label for="hotel">Разгромил отель</label>
+      <label for="hotel" class="main-form__label">Разгромил отель</label>
       <input type="checkbox" id="hotel">
     </fieldset>
 
@@ -78,8 +79,7 @@
 
     <div class="main-form__emotions">
       <label for="main-form__emotions-text">Опишите свои эмоции</label>
-      <textarea name="main-form__emotions-descr" id="main-form__emotions-text"
-                placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      <textarea name="main-form__emotions-descr" id="main-form__emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
     </div>
     <input class="main-form__btn" type="submit" value="Отправить форму">
     <div class="main-note"><span>*</span> - Обязательные для заполнения поля
@@ -90,7 +90,7 @@
 
 <footer class="main-footer">
   <div class="main-footer__logo">
-    <a href="index.html"><img src="http://placehold.it/147x40" alt="Logo" width="147" height="40"></a>
+    <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="40"></a>
   </div>
   <div class="social-links">
     <a href="#" class="social-links social-links--twitter">Twitter</a>
@@ -99,7 +99,7 @@
   </div>
   <div class="copyright">
     <b>Разработано</b>
-    <img src="http://placehold.it/28x35" alt="Лого Html Academy">
+    <img src="img/logo-htmlacademy.svg" alt="Лого Html Academy">
   </div>
 </footer>
 </body>
