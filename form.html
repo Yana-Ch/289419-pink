@@ -8,23 +8,29 @@
 <body>
 <header class="page-header">
   <nav class="main-nav">
-    <div class="page-header__logo">
-      <a href="index.html">
-        <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
+    <div class="container">
+      <div class="main-nav__menu">
+        <div class="main-nav__logo">Лого</div>
+        <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
+      </div>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+        <li class="main-nav__item main-nav__item--active"><a href="form.html">Конкурс</a></li>
+        <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+      </ul>
     </div>
-    <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
-    <ul class="main-nav__list">
-      <li class="main-nav__item main-nav__item--active"><a href="index.html">Главная</a></li>
-      <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-      <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-      <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-    </ul>
   </nav>
 </header>
 <main>
+
   <div class="contest">
+    <div class="contest__wrapper">
     <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
   </div>
+  </div>
+
   <form class="main-form" method="post" action="https://echo.htmlacademy.ru/">
     <fieldset class="main-form__user-data">
       <div class="main-form__info">
@@ -38,20 +44,21 @@
         <input type="text" class="main-form__input" id="second-name" placeholder="Ну и отчество тоже *" required>
       </div>
     </fieldset>
+
     <fieldset class="main-form__achievements">
-      <div class="main-form__achievements-text">Ваши безбашенные достижения в путешествии</div>
-      <label for="shark" class="main-form__label">Сделал селфи с акулой</label>
+      <div class="main-form__title">Ваши безбашенные достижения в путешествии</div>
       <input type="checkbox" id="shark" checked>
-      <label for="beach" class="main-form__label">Обгорел на пляже</label>
+      <label for="shark" class="main-form__label">Сделал селфи с акулой</label>
       <input type="checkbox" id="beach" checked>
-      <label for="chuck" class="main-form__label">Видел Чака Норриса</label>
+      <label for="beach" class="main-form__label">Обгорел на пляже</label>
       <input type="checkbox" id="chuck">
-      <label for="souvenir" class="main-form__label">Накупил сувениров</label>
+      <label for="chuck" class="main-form__label">Видел Чака Норриса</label>
       <input type="checkbox" id="souvenir">
-      <label for="tower" class="main-form__label">Удержал башню</label>
+      <label for="souvenir" class="main-form__label">Накупил сувениров</label>
       <input type="checkbox" id="tower" checked>
-      <label for="hotel" class="main-form__label">Разгромил отель</label>
+      <label for="tower" class="main-form__label">Удержал башню</label>
       <input type="checkbox" id="hotel">
+      <label for="hotel" class="main-form__label">Разгромил отель</label>
     </fieldset>
     <fieldset class="main-form__contacts">
       <div class="main-form__field">
@@ -64,7 +71,7 @@
       </div>
     </fieldset>
     <fieldset class="main-form__apps">
-      <div class="main-form__apps-text">С каким приложением путешествовали?</div>
+      <div class="main-form__title">С каким приложением путешествовали?</div>
       <label for="ios">Pink для iOS</label>
       <input type="tel" id="ios">
       <label for="android">Pink на Android</label>
@@ -73,8 +80,8 @@
       <input type="tel" id="wp">
     </fieldset>
     <div class="main-form__emotions">
-      <label for="main-form__emotions-text">Опишите свои эмоции</label>
-      <textarea name="main-form__emotions-descr" id="main-form__emotions-text"
+      <label for="main-form__title">Опишите свои эмоции</label>
+      <textarea name="main-form__emotions-descr" id="main-form__title"
                 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
     </div>
     <input class="main-form__btn" type="submit" value="Отправить форму">
@@ -82,14 +89,15 @@
     </div>
   </form>
 </main>
+
 <footer class="main-footer">
   <div class="main-footer__logo">
     <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="40"></a>
   </div>
   <div class="social-links">
-    <a href="#" class="social-links social-links--twitter">Twitter</a>
-    <a href="#" class="social-links social-links--facebook">Facebook</a>
-    <a href="#" class="social-links social-links--youtube">Youtube</a>
+    <a href="#" class="social-link social-link--twitter">Twitter</a>
+    <a href="#" class="social-link social-link--facebook">Facebook</a>
+    <a href="#" class="social-link social-link--youtube">Youtube</a>
   </div>
   <div class="copyright">
     <b>Разработано</b>

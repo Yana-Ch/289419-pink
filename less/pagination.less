@@ -1,23 +1,23 @@
 .pagination {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 .pagination__page {
-  display: inline-block;
   background-color: #bec2c7;
+  border: 3px solid #fff;
+  border-radius: 50%;
   width: 6px;
   height: 6px;
-  margin-top: 38px;
-  margin-bottom: 45px;
-  border: 3px solid #1d2631;
-  border-radius: 50%;
+  font-size: 0;
+  margin: 20px 0 20px 0;
   cursor: pointer;
-  vertical-align: middle;
 
-  &--active {
-    border: 3px solid #1d2631;
-    background-color: #fff;
+  &:nth-child(n+2) {
+    margin-left: 15px;
   }
-  &--bg {
-    border: 3px solid #f2f2f2;
+  &--active {
+    border: 3px solid #283645;
+    background-color: #fff;
   }
 }
