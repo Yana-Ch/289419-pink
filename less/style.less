@@ -43,22 +43,21 @@
     .media-mixin(@break-mobile);
 }
 
-@media all and (max-width: (@break-tablet - 1)) {
-  .hide-mobile {
-    display: none !important;
-  }
-}
-
 @media all and (min-width: @break-tablet) {
     .media-mixin(@break-tablet);
 }
 
-@media all and (max-width: (@break-desktop - 1)) {
-  .hide-tablet {
-    display: none !important;
-  }
-}
-
 @media all and (min-width: @break-desktop) {
     .media-mixin(@break-desktop);
+}
+
+@media all and (max-width: (@break-tablet - 1)) {
+  .hide-mobile {
+    display: none;
+  }
+}
+@media all and (max-width: (@break-desktop - 1)) {
+  .hide-tablet {
+    display: none;
+  }
 }
