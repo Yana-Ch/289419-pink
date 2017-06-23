@@ -1,0 +1,32 @@
+.preface {
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  background-color: #fff;
+  color: @color-deep-blue;
+
+  &:first-of-type {
+    padding-top: 15px;
+  }
+
+  &:last-of-type {
+    padding-bottom: 65px;
+  }
+}
+
+
+  .media-mixin(@break) when (@break = @break-tablet) {
+    .preface {
+      font-size: 16px;
+      max-width: 530px;
+    }
+  }
+
+  .media-mixin(@break) when (@break = @break-desktop) {
+    .preface {
+      font-size: 18px;
+      max-width: 775px;
+    }
+  }

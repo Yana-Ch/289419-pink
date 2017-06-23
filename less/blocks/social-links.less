@@ -1,0 +1,54 @@
+.social-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin: 0 6px;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    text-indent: -9999px;
+    font-size: 0;
+    color: transparent;
+    width: 51px;
+    height: 51px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: @transition-link;
+    border: 3px solid fade(@color-deep-blue, 10%);
+
+    &:hover {
+      border-color: @color-deep-blue;
+    }
+
+    &:active, &:focus {
+      border-color: fade(@color-deep-blue, 40%);
+      opacity: .3;
+    }
+
+    &--twitter {
+      background-image: url(../img/icon-twitter.svg);
+    }
+
+    &--facebook {
+      background-image: url(../img/icon-facebook.svg);
+    }
+
+    &--youtube {
+      background-image: url(../img/icon-youtube.svg);
+    }
+  }
+}
+
+
+  .media-mixin(@break) when (@break = @break-desktop) {
+    .social-links {
+
+    }
+  }

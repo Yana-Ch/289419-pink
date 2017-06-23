@@ -1,0 +1,72 @@
+// @mixin container {
+//   width: $container-mobile;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @media #{$tablet-widths} {
+//     width: $container-tablet;
+//   }
+
+//   @media #{$desktop-widths} {
+//     width: $container-desktop;
+//   }
+// }
+
+// @mixin clearfix {
+//   &::after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+// }
+
+// ####################
+//
+
+
+@font-base-size: 14;
+
+.font-size(@font-size: @font-base) {
+  @rem: round(@font-size / @font-base-size, 3); //rounds to 3 decimal places
+  //font-size: @font-size * 1px; //fallback to pixels
+  font-size: ~"@{rem}rem";
+}
+
+
+
+@break-mobile:  320px;
+@break-tablet:  660px;
+@break-desktop: 960px;
+
+
+// Fonts
+@font-default: OpenSans, Arial, sans-serif;
+
+// @font-size-extra-small: 12px;
+// @font-size-small: 14px;
+// @font-size-main: 18px;
+// @font-size-big: 24px;
+// @font-size-title-min: 30px;
+// @font-size-title-big: 40px;
+
+
+// Colors
+@color-white:     #ffffff;
+@color-gray:      #f2f2f2;
+@color-darkgray:  #e5e5e5;
+@color-black:     #000000;
+@color-pink:      #d22856;
+@color-deep-blue: #283645;
+@color-mirage:    #1d2631;
+@color-green-1:   #2aab6d;
+@color-green-2:   #1c9b5e;
+
+// @color-blue-dark: #283645;
+// @color-grey-light: #f2f2f2;
+// @color-green: #2aab6d;
+// @color-pink: #de6183;
+
+
+// Transitions
+@transition-link: all .2s ease-out;
+@transition-button: all .3s ease-out;
