@@ -1,0 +1,266 @@
+.prices {
+  position: relative;
+  z-index: 1;
+  background-color: @color-gray;
+  padding-top: 85px;
+  padding-bottom: 40px;
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: ~'calc(100% + 10px)';
+    background-color: @color-gray;
+    background-image: url(../img/bg-triangle-white.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__col {
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    cursor: -webkit-grab;
+
+    &:active {
+      cursor: col-resize;
+      cursor: -webkit-grabbing;
+    }
+
+    &--features {
+      display: none;
+    }
+  }
+
+  &__dots {
+    margin: 35px 0 0;
+  }
+}
+
+.pricing-taxes {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  &__cell {
+    background-color: #fff;
+    color: @color-deep-blue;
+    padding: 14px 22px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid @color-darkgray;
+
+    &--hidden {
+      visibility: hidden;
+      border: none;
+    }
+
+    &--title {
+      background-color: @color-deep-blue;
+      color: #fff;
+      height: 100px;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      flex-direction: column;
+    }
+
+    &--hit {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        height: 30px;
+        width: 45px;
+        left: -45px;
+        top: -37px;
+        transform: rotate(-45deg);
+        border-style: solid;
+        border-width: 27px;
+        border-color: transparent transparent @color-pink;
+      }
+
+      &:after {
+        position: absolute;
+        z-index: 2;
+        content: 'ХИТ';
+        height: 30px;
+        width: 30px;
+        left: 9px;
+        top: 9px;
+        transform: rotate(-45deg);
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff
+      }
+    }
+  }
+
+  &__price {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    text-transform: uppercase;
+  }
+
+  &__icon-yes,
+  &__icon-no {
+    margin: 0 auto;
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 31px;
+    width: 31px;
+    position: absolute;
+    right: 21px;
+  }
+
+  &__icon-yes {
+    background-image: url(../img/icon-yes.svg);
+  }
+
+  &__icon-no {
+    background-image: url(../img/icon-no.svg);
+  }
+}
+
+
+  @media all and (max-width: (@break-tablet - 1)) {
+    .prices {
+
+      .container {
+        width: initial;
+        min-width: initial;
+        margin: initial;
+        padding: 0;
+      }
+
+      .container--flex.slick-initialized {
+        display: block;
+      }
+    }
+  }
+
+  .media-mixin(@break) when (@break = @break-tablet) {
+    .prices {
+      padding-bottom: 70px;
+
+      &__col {
+        user-select: initial;
+        cursor: initial;
+
+        &:active {
+          cursor: initial;
+        }
+
+        &--features {
+          display: block;
+        }
+      }
+    }
+
+    .pricing-taxes {
+
+      &__cell {
+        padding: 6px 15px 7px;
+        justify-content: center;
+
+        &--left {
+          justify-content: flex-start;
+        }
+
+        &--title {
+          height: 80px;
+          font-size: 16px;
+          border-radius: 4px;
+        }
+
+        &--hit {
+
+          &:before {
+            width: 30px;
+            left: -42px;
+            top: -42px;
+          }
+
+          &:after {
+            left: 5px;
+            top: 5px;
+          }
+        }
+      }
+
+      &__price {
+        font-size: 18px;
+      }
+
+      &__value {
+        display: none;
+      }
+
+      &__icon-yes,
+      &__icon-no {
+        position: relative;
+        right: 0;
+      }
+    }
+  }
+
+  .media-mixin(@break) when (@break = @break-desktop) {
+    .prices {
+      padding-top: 150px;
+      padding-bottom: 95px;
+    }
+
+    .pricing-taxes {
+
+      &__cell {
+        font-size: 18px;
+        padding: 14px 20px 15px;
+
+        &--title {
+          font-size: 18px;
+          height: 100px;
+        }
+
+        &--hit {
+
+          &:before {
+            width: 45px;
+            left: -45px;
+            top: -37px;
+          }
+
+          &:after {
+            left: 9px;
+            top: 9px;
+          }
+        }
+      }
+
+      &__price {
+        font-size: 24px;
+      }
+    }
+  }

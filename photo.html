@@ -1,179 +1,292 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="page-header">
-  <nav class="main-nav">
-    <div class="container">
-      <div class="main-nav__menu">
-        <div class="main-nav__logo">Лого</div>
-        <button class="main-nav__btn-menu">Свернуть-Развернуть</button>
-      </div>
 
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__item main-nav__item--active"><a href="photo.html">Фотографии</a></li>
-        <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-        <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<main>
-  <section class="gallery">
-    <h1 class="gallery__title">Фотографии пользователей</h1>
-    <p class="gallery__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
-      ваших?</p>
-  </section>
-  <section class="photos-page">
-    <div class="photos-wrap">
-      <div class="users-photos">
-        <a href="" class="users-photos__photo users-photos__photo--panorama">
-          <img src="http://placehold.it/320x137" alt="Панорамма">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Анна
-            <span class="users-photos__time">(5 минут назад)</span>
-            <span class="users-photos_text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 215</span>
-          </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, oh0=oho">
+    <title>HTML Academy: Пинк</title>
+    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header__bar page-header__bar--open">
+            <nav class="main-nav container">
+
+                <div class="main-nav__container container">
+                    <div class="logo main-nav__logo">
+                        <a href="/" class="logo__link" title="Пинк">
+                            <picture class="logo__image">
+                                <source media="(min-width: 960px)" srcset="img/logo-white-desktop.png">
+                                <source media="(min-width: 660px)" srcset="img/logo-white-tablet.png">
+                                <img src="img/logo-white-mobile.svg" alt="Пинк">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="main-nav__menu">
+                        <a class="main-nav__btn-menu" href="javascript:void(0)">Свернуть/Развернуть</a>
+                    </div>
+                </div>
+
+                <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="index.html">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--active">
+                        <a class="main-nav__link" href="photo.html">
+                            Фотографии
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="form.html">
+                            Конкурс
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="https://htmlacademy.ru/">
+                            HTML Academy
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
         </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Машина">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Левон
-            <span class="users-photos__time">(5 часов назад)</span>
-            <span class="users-photos_text">Вчера он на луну летал, сегодня в руки к нам попал.</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 356</span>
-          </div>
+
+        <div class="page-header__background">
+            <h1 class="page-header__caption container">Фотографии<br> пользователей</h1>
         </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Барабаны">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Антон
-            <span class="users-photos__time">(12 часов назад)</span>
-            <span class="users-photos_text">Соседи будут рады!</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 666</span>
-          </div>
+    </header>
+
+    <main>
+        <section class="users-photos">
+            <h2 class="preface users-photos__preface container">
+                Взгляните на фотографии, которые выкладывают пользователи!<br>
+                Видите, как не хватает ваших?
+            </h2>
+
+            <div class="users-photos__item users-photos__item--panorama">
+                <a href="javascript:void(0)" class="users-photos__photo">
+                    <picture>
+                        <source media="(min-width: 960px)" srcset="img/panorama-desktop.jpg">
+                        <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg">
+                        <img src="img/panorama-mobile.jpg" alt="Взгляните на фотографии, которые выкладывают пользователи!">
+                    </picture>
+
+                    <div class="container users-photos__badge-wrapper">
+                        <span class="users-photos__badge">Панорама дня</span>
+                    </div>
+                </a>
+                <div class="container">
+                    <div class="users-photos__info">
+                        <div class="users-photos__author">
+                            <span class="users-photos__name">Анна</span>
+                            <span class="users-photos__time">(5 минут назад)</span>
+                            <div class="users-photos__likes users-photos__likes--panorama">
+                                <span class="users-photos__likes-sum">Нравится: 215</span>
+                                <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                            </div>
+                        </div>
+                        <p class="users-photos__text">
+                            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="users-photos-wrap container">
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-1-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg">
+                            <img src="img/photo-1-mobile.jpg" alt="Машина">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Левон</span>
+                        <span class="users-photos__time">(5 часов назад)</span>
+                        <p class="users-photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 356</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-2-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg">
+                            <img src="img/photo-2-mobile.jpg" alt="Барабаны">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Антон</span>
+                        <span class="users-photos__time">(12 часов назад)</span>
+                        <p class="users-photos__text">Соседи будут рады!</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 666</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-3-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg">
+                            <img src="img/photo-3-mobile.jpg" alt="Окно">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Борис</span>
+                        <span class="users-photos__time">(20 часов назад)</span>
+                        <p class="users-photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 215</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-4-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg">
+                            <img src="img/photo-4-mobile.jpg" alt="Кубанская бахча">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Сергей</span>
+                        <span class="users-photos__time">(25 часов назад)</span>
+                        <p class="users-photos__text">Самая кубанская в мире!</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 4</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-5-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg">
+                            <img src="img/photo-5-mobile.jpg" alt="Горы">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Максим</span>
+                        <span class="users-photos__time">(40 часов назад)</span>
+                        <p class="users-photos__text">Где снег-то?</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 150</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users-photos__item">
+                    <a href="javascript:void(0)">
+                        <picture class="users-photos__photo">
+                            <source media="(min-width: 960px)" srcset="img/photo-6-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg">
+                            <img src="img/photo-6-mobile.jpg" alt="Самолет">
+                        </picture>
+                    </a>
+                    <div class="users-photos__info">
+                        <span class="users-photos__name">Надежда</span>
+                        <span class="users-photos__time">(45 часов назад)</span>
+                        <p class="users-photos__text">Всем GM и взаимные лайки!</p>
+                        <div class="users-photos__likes">
+                            <span class="users-photos__likes-sum">Нравится: 2560</span>
+                            <a class="users-photos__likes-icon" href="javascript:void(0)">Мне нравится!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-edit">
+            <div class="container">
+                <h2 class="preface photo-edit__preface">
+                    Затмите их всех!<br>
+                    Выкладывайте все, что накопилось в телефоне!
+                </h2>
+
+                <form class="photo-editor" action="https://echo.htmlacademy.ru/">
+                    <div class="photo-editor__wrapper">
+                        <div class="photo-editor__photo">
+                            <picture class="users-photos__photo">
+                                <source media="(min-width: 960px)" srcset="img/photo-7-desktop.jpg">
+                                <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg">
+                                <img src="img/photo-7-mobile.jpg" alt="Фото">
+                            </picture>
+                        </div>
+
+                        <div class="photo-editor__settings">
+                            <div class="editor__params">
+                                <div class="editor__settings editor__settings--crop editor__settings--active">
+                                    <input type="range" name="scale" class="photo-editor__slider">
+                                </div>
+                                <div class="editor__settings editor__settings--fill">
+                                    <input type="range" name="fill" class="photo-editor__slider">
+                                </div>
+                                <div class="editor__settings editor__settings--contrast">
+                                    <input type="range" name="contrast" class="photo-editor__slider">
+                                </div>
+                            </div>
+
+                            <input type="range" name="scale-fill-contrast" class="photo-editor__slider photo-editor__slider--global">
+
+                            <div class="editor__actions">
+                                <button class="photo-editor__btn btn--pink" name="photo-editor-send" type="submit">Запостить</button>
+                                <button class="photo-editor__btn btn--reset" name="photo-editor-cancel" type="reset">Отмена</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container container--flex container--equal">
+            <div class="logo main-footer__logo">
+                <a href="/" class="logo__link" title="Пинк">
+                    <picture class="logo__image">
+                        <source media="(min-width: 960px)" srcset="img/logo-blue-desktop.png">
+                        <source media="(min-width: 660px)" srcset="img/logo-blue-tablet.png">
+                        <img src="img/logo-blue-mobile.svg" alt="Пинк">
+                    </picture>
+                </a>
+            </div>
+
+            <ul class="social-links main-footer__socials">
+                <li class="social-links__item"><a href="#" class="social-links__link social-links__link--twitter">Twitter</a></li>
+                <li class="social-links__item"><a href="#" class="social-links__link social-links__link--facebook">Facebook</a></li>
+                <li class="social-links__item"><a href="#" class="social-links__link social-links__link--youtube">Youtube</a></li>
+            </ul>
+
+            <div class="copyright main-footer__copyright">
+                Разработано
+                <svg version="1.0" class="copyright__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="42px" viewBox="0 0 26.943 34.09">
+                  <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+                </svg>
+            </div>
         </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Окно">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Борис
-            <span class="users-photos__time">(20 часов назад)</span>
-            <span class="users-photos_text">Здесь могла быть ваша цитата о высоком и вечном.</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 215</span>
-          </div>
-        </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Кубанская бахча">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Сергей
-            <span class="users-photos__time">(25 часов назад)</span>
-            <span class="users-photos_text">Самая кубанская в мире!</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 4</span>
-          </div>
-        </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Горы">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Максим
-            <span class="users-photos__time">(40 часов назад)</span>
-            <span class="users-photos_text">Где снег-то?</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 150</span>
-          </div>
-        </div>
-      </div>
-      <div class="users-photos">
-        <a class="users-photos__photo">
-          <img src="http://placehold.it/280x180" alt="Самолет">
-        </a>
-        <div class="users-photos__info">
-          <p class="users-photos__name">Надежда
-            <span class="users-photos__time">(45 часов назад)</span>
-            <span class="users-photos_text">Всем GM и взаимные лайки!</span>
-          </p>
-          <div class="users-photos__likes">
-            <span class="users-photos__likes-icon"></span>
-            <span class="users-photos__likes-sum">Нравится: 2560</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="photo-posting">
-      <p class="photo-posting__slogan">
-        Затмите их всех!
-        Выкладывайте все, что накопилось в телефоне!</p>
-    </div>
-  </section>
-  <section class="photo-edit">
-    <form class="photo-editor">
-      <div class="photo-editor__wrapper">
-        <div class="photo-editor__photo"><img src="http://placehold.it/280x373"></div>
-        <div class="photo-editor__settings">
-          <div class="editor__settings editor__settings--crop editor__settings--active"></div>
-          <div class="editor__settings editor__settings--fill editor__settings--active"></div>
-          <div class="editor__settings editor__settings--contrast editor__settings--active"></div>
-        </div>
-        <input type="range" name="scale" class="photo-editor__scale">
-        <button class="photo-editor__btn  btn--pink" name="photo-editor-send" type="submit"
-                formaction="https://echo.htmlacademy.ru/">Запостить
-        </button>
-        <button class="photo-editor__btn  btn--reset" type="reset" name="photo-editor-cancel">Отмена</button>
-      </div>
-    </form>
-  </section>
-</main>
-<footer class="main-footer">
-  <div class="main-footer__logo">
-    <a href="index.html"><img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="147" height="40"></a>
-  </div>
-  <div class="social-links">
-    <a href="#" class="social-link social-link--twitter">Twitter</a>
-    <a href="#" class="social-link social-link--facebook">Facebook</a>
-    <a href="#" class="social-link social-link--youtube">Youtube</a>
-  </div>
-  <div class="copyright">
-    <b>Разработано</b>
-    <img src="img/logo-htmlacademy.svg" alt="Лого Html Academy">
-  </div>
-</footer>
+    </footer>
+
+
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
