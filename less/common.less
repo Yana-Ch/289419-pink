@@ -1,0 +1,23 @@
+html, body {
+  font-family: @font-default;
+  font-size: (@font-base-size*1px);
+  line-height: 1.2;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+  color: @color-black;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -4,28 +4,26 @@
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
-    "autoprefixer": "6.7.x",
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.18.12",
+    "css-mqpacker": "^5.0.1",
+    "editorconfig-tools": "0.1.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
-    "grunt-contrib-less": "1.4.x",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-less": "1.3.0",
     "grunt-contrib-watch": "1.0.0",
+    "grunt-csso": "^2.0.1",
     "grunt-postcss": "0.8.0",
-    "@htmlacademy/editorconfig-cli": "1.x"
+    "grunt-svgmin": "^4.0.0",
+    "grunt-svgstore": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
   },
   "scripts": {
-    "test": "editorconfig-cli",
-    "build": "grunt less && grunt postcss",
-    "start": "npm run build && grunt serve"
-  },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
-  ],
-  "engines": {
-    "node": "6.10"
+    "test": "editorconfig-tools check *",
+    "build": "grunt build",
+    "server": "npm run build && grunt serve"
   }
 }

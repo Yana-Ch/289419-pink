@@ -1,0 +1,57 @@
+@import "variables";
+@import "libraries";
+
+@import "common";
+@import "grid";
+
+/* Header */
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/logo";
+@import "blocks/download";
+@import "blocks/preface";
+
+/* Main: Homepage */
+@import "blocks/advantages";
+@import "blocks/diagram";
+@import "blocks/reviews";
+@import "blocks/prices";
+@import "blocks/contacts";
+
+/* Main: Photo */
+@import "blocks/users-photos-page";
+@import "blocks/photo-edit";
+
+/* Main: Form */
+@import "blocks/main-form";
+
+/* Footer */
+@import "blocks/copyright";
+@import "blocks/social-links";
+@import "blocks/main-footer";
+
+* {
+  box-sizing: border-box;
+}
+
+// body {
+//   background-color: deeppink;
+// }
+
+@media all and (max-width: (@break-tablet - 1)) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media all and (min-width: @break-mobile) {
+    .media-mixin(@break-mobile);
+}
+
+@media all and (min-width: @break-tablet) {
+    .media-mixin(@break-tablet);
+}
+
+@media all and (min-width: @break-desktop) {
+    .media-mixin(@break-desktop);
+}

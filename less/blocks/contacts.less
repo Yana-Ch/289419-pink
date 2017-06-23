@@ -1,0 +1,161 @@
+.contacts {
+  min-height: 440px;
+  background-color: #fff;
+  padding-top: 45px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    transition: @transition-link;
+    border-bottom: 1px solid fade(@color-deep-blue, 0);
+
+    &:hover {
+      border-color: @color-deep-blue;
+      color: @color-deep-blue;
+    }
+
+    &:active, &:focus {
+      border-color: transparent;
+      opacity: .3;
+    }
+  }
+
+  &__intro {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 36px;
+    color: @color-deep-blue;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  &__data {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 5px;
+    color: @color-deep-blue;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0;
+    color: @color-pink;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: @color-gray;
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    background-size: contain;
+    background-image: url(../img/bg-triangle-white-footer.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+
+  .media-mixin(@break) when (@break = @break-tablet) {
+    .contacts {
+
+      &__intro {
+        font-size: 40px;
+        margin-bottom: 46px;
+      }
+
+      &__info {
+        flex-direction: row;
+        margin-bottom: 30px;
+      }
+
+      &__data {
+        max-width: 250px;
+        margin-bottom: 0;
+
+        &--call {
+          flex-basis: 50%;
+        }
+
+        &--write {
+          flex-basis: 50%;
+        }
+
+        &--come {
+          flex-basis: 100%;
+          margin-top: 45px;
+        }
+      }
+
+      &__title {
+        margin-bottom: 8px;
+      }
+    }
+
+    .contacts__map {
+      height: 370px;
+    }
+  }
+
+  .media-mixin(@break) when (@break = @break-desktop) {
+    .contacts {
+      padding-top: 65px;
+
+      &__intro {
+        font-size: 50px;
+        margin: 0 0 60px;
+      }
+
+      &__info {
+        margin-bottom: 0;
+      }
+
+      &__data {
+        flex-grow: 1;
+        flex-basis: 0;
+        text-align: center;
+        max-width: 250px;
+
+        &--write {
+          order: 3;
+        }
+
+        &--come {
+          order: 2;
+          margin-top: 0;
+        }
+      }
+
+      &__title {
+        margin: 0 0 26px;
+      }
+    }
+
+    .contacts__map {
+      height: 520px;
+    }
+  }

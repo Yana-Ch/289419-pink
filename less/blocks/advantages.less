@@ -1,0 +1,249 @@
+.advantages {
+  padding-top: 40px;
+  background-color: #fff;
+}
+
+.advantages__question {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  color: @color-deep-blue;
+  margin: 0;
+
+  & + .advantages__question {
+    margin-top: 25px;
+  }
+}
+
+.advantages-benefits {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 40px;
+    background-size: ~'calc(100% + 10px)';  // SVG background hack: unnecessary left offset fix
+    background-color: @color-gray;
+    background-image: url(../img/bg-triangle-white.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .container--flex {
+    flex-direction: column;
+  }
+}
+
+.advantages__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 115px;
+}
+
+.advantages__image {
+  padding-top: 5px;
+  margin: 0 auto;
+  max-height: 283px;
+  overflow: hidden;
+}
+
+.advantages-text {
+  text-align: center;
+  flex-grow: 0;
+  flex-basis: 0;
+  max-width: 310px;
+  // cursor: pointer;
+
+  &:hover {
+    .advantages-text__image img {
+      margin-top: -45px;
+    }
+  }
+}
+
+.advantages-text__image {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+  margin-bottom: 40px;
+  padding-top: 45px;
+
+  img {
+    transition: margin-top .25s ease;
+    backface-visibility: hidden;
+  }
+
+  &:after {
+    z-index: 3;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    height: 15px;
+    background-color: @color-gray;
+  }
+
+  &__shadow {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    right: 20px;
+    left: 20px;
+    height: 1px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .5);
+
+    &:before,&:after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      height: 30px;
+      width: 30px;
+    }
+
+    &:before {
+      left: -10px;
+      background-image: linear-gradient(to left, transparent 0%, #f2f2f2 75%);
+    }
+
+    &:after {
+      right: -10px;
+      background-image: linear-gradient(to right, transparent 0%, #f2f2f2 75%);
+    }
+  }
+}
+
+.advantages-text__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.advantages-text__paragraph {
+  color: @color-deep-blue;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 34px;
+  padding: 0;
+}
+
+
+  .media-mixin(@break) when (@break = @break-tablet) {
+    .advantages {
+      padding-top: 48px;
+    }
+
+    .advantages__question {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 10px;
+
+      & + .advantages__question {
+        margin-top: -10px;
+      }
+    }
+
+    .advantages-benefits {
+      max-height: 520px;
+      overflow: hidden;
+
+      .container--flex {
+        flex-direction: row;
+      }
+    }
+
+    .advantages__wrapper {
+      order: 2;
+      margin-left: 43px;
+      padding-top: 105px;
+      padding-bottom: 25px;
+    }
+
+    .advantages__image {
+      padding-top: 40px;
+      margin: 0;
+      max-height: initial;
+      overflow: initial;
+    }
+
+    .advantages-text {
+      text-align: left;
+    }
+
+    .advantages-text__title {
+      margin-bottom: 14px;
+    }
+
+    .advantages-text__paragraph {
+      margin-top: 14px;
+    }
+  }
+
+  .media-mixin(@break) when (@break = @break-desktop) {
+    .advantages {
+      padding-top: 70px;
+    }
+
+    .advantages__question {
+      font-size: 50px;
+      line-height: 58px;
+      margin-bottom: 35px;
+
+      & + .advantages__question {
+        margin-top: -35px;
+      }
+    }
+
+    .advantages-benefits {
+      max-height: initial;
+      overflow: initial;
+    }
+
+    .advantages__wrapper {
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 0;
+      margin-left: 0;
+      order: 0;
+    }
+
+    .advantages__image {
+      display: none;
+    }
+
+    .advantages-text {
+      text-align: center;
+      flex-grow: 1;
+      max-width: 275px;
+    }
+
+    .advantages-text__image {
+      display: block;
+    }
+
+    .advantages-text__title {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+
+    .advantages-text__paragraph {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 0 15px;
+      margin: 0;
+    }
+  }
