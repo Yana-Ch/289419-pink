@@ -23,6 +23,9 @@
   margin: 0;
   list-style-type: none;
 
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__item {
@@ -91,6 +94,12 @@
   color: transparent;
   font-size: 0;
   text-indent: -9999px;
+
+  .page-header__bar--closed & {
+    background-image: url(../img/icon-menu-burger.svg);
+    height: 24px;
+    width: 50px;
+  }
 }
 
   @media all and (max-width: (@break-desktop - 1))  {
@@ -165,6 +174,10 @@
     .main-nav__list {
       width: initial;
       position: initial;
+
+      &--closed {
+        display: block;
+      }
     }
 
     .main-nav__item {
