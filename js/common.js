@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+  if ($('.main-nav__btn-menu').length) {
+    $('.main-nav__btn-menu').click(function(e) {
+      e.preventDefault();
+
+      $('.main-nav__list').toggleClass('main-nav__list--closed');
+      $('.page-header__bar').toggleClass('page-header__bar--closed');
+    });
+  }
+
   if ($('#reviewsCarousel').length) {
     $('#reviewsCarousel').slick({
       dots: false,

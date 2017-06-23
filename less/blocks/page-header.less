@@ -6,6 +6,7 @@
   position: relative;
   padding-top: 110px;
   overflow: hidden;
+  background-color: @color-mirage;
   align-items: center;
   min-height: 395px;
 
@@ -51,6 +52,10 @@
   background-color: @color-deep-blue;
   margin-bottom: -66px;
   transition: all .3s ease;
+
+  &--closed {
+    background-color: rgba(0, 0, 0, .3);
+  }
 }
 
 .page-header__caption {
@@ -87,7 +92,7 @@
 
     .page-header__caption {
       font-size: 50px;
-      margin-bottom: 38px;
+      margin-bottom: 10px;
     }
   }
 
