@@ -104,7 +104,7 @@
 
   @media all and (max-width: (@break-desktop - 1))  {
     .main-nav.container {
-      width: initial;
+      width: auto;
       min-width: initial;
       margin: initial;
       padding: 0;
@@ -165,9 +165,9 @@
 
   .media-mixin(@break) when (@break = @break-desktop) {
     .main-nav__container.container {
-      width: initial;
-      min-width: initial;
-      margin: initial;
+      width: auto;
+      min-width: auto;
+      margin: 0;
       padding: 0;
     }
 

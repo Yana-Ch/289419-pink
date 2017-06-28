@@ -36,6 +36,7 @@
 
   .container--flex {
     flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -57,7 +58,7 @@
 .advantages-text {
   text-align: center;
   flex-grow: 0;
-  flex-basis: 0;
+  flex-basis: auto;
   max-width: 310px;
   // cursor: pointer;
 
@@ -170,17 +171,19 @@
       margin-left: 43px;
       padding-top: 105px;
       padding-bottom: 25px;
+      flex: 1;
     }
 
     .advantages__image {
       padding-top: 40px;
       margin: 0;
-      max-height: initial;
+      max-height: inherit;
       overflow: initial;
     }
 
     .advantages-text {
       text-align: left;
+      flex: 0 0 auto;
     }
 
     .advantages-text__title {
@@ -208,7 +211,7 @@
     }
 
     .advantages-benefits {
-      max-height: initial;
+      max-height: none;
       overflow: initial;
     }
 
@@ -228,6 +231,7 @@
       text-align: center;
       flex-grow: 1;
       max-width: 275px;
+      flex: 0 0 auto;
     }
 
     .advantages-text__image {

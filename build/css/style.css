@@ -483,6 +483,7 @@ template {
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
+  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .slick-track {
@@ -559,6 +560,7 @@ template {
   background: transparent;
   color: transparent;
   top: 50%;
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
@@ -690,7 +692,6 @@ body {
   font-family: OpenSans, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  height: 100%;
 }
 body {
   display: -ms-flexbox;
@@ -707,6 +708,9 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+main {
+  height: 100%;
 }
 .container {
   position: relative;
@@ -771,6 +775,8 @@ a:hover {
   background-position: top center;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding-top: 73px;
   -ms-flex-align: center;
       align-items: center;
@@ -782,6 +788,8 @@ a:hover {
   padding-top: 0;
   -ms-flex-align: end;
       align-items: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 .page-header__bar {
   position: relative;
@@ -913,6 +921,7 @@ a:hover {
   display: flex;
   -ms-flex-align: end;
       align-items: flex-end;
+  height: 100%;
 }
 .download__wrapper {
   color: #fff;
@@ -1045,6 +1054,7 @@ a:hover {
 .advantages-benefits .container--flex {
   -ms-flex-direction: column;
       flex-direction: column;
+  text-align: center;
 }
 .advantages__wrapper {
   width: 100%;
@@ -1066,8 +1076,8 @@ a:hover {
   text-align: center;
   -ms-flex-positive: 0;
       flex-grow: 0;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   max-width: 310px;
 }
 .advantages-text:hover .advantages-text__image img {
@@ -1188,7 +1198,8 @@ a:hover {
   background: transparent;
   color: transparent;
   top: calc(50% - 45px);
-  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
   padding: 0;
   border: none;
   outline: none;
@@ -1289,6 +1300,7 @@ a:hover {
   color: #283645;
   margin: 0 auto;
   max-width: 775px;
+  width: 100%;
 }
 .review__author {
   font-size: 18px;
@@ -1391,7 +1403,8 @@ a:hover {
   width: 45px;
   left: -45px;
   top: -37px;
-  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
   border-style: solid;
   border-width: 27px;
   border-color: transparent transparent #d22856;
@@ -1404,7 +1417,8 @@ a:hover {
   width: 30px;
   left: 9px;
   top: 9px;
-  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
   font-size: 14px;
   font-weight: 500;
   color: #fff;
@@ -1631,11 +1645,12 @@ a:hover {
 .users-photos__text {
   font-size: 14px;
   line-height: 24px;
-  margin: 0 0 3px;
+  margin: 0 0 36px;
 }
 .users-photos__badge-wrapper {
   position: absolute;
-  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
   left: 50%;
   top: 0;
   text-align: right;
@@ -1748,6 +1763,7 @@ a:hover {
   background: transparent;
   -webkit-appearance: none;
   margin: 10px 0;
+  padding: 0;
   height: 22px;
   width: 100%;
 }
@@ -1898,6 +1914,9 @@ a:hover {
       flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100%;
 }
 .main-form__descr:first-of-type {
   padding-top: 45px;
@@ -2005,6 +2024,7 @@ a:hover {
 }
 .main-form__fieldset--contacts .main-form__input-icon {
   margin-bottom: 15px;
+  line-height: 0;
 }
 .main-form__fieldset--contacts .main-form__input-icon + .main-form__label {
   margin: 0 0 0 20px;
@@ -2060,7 +2080,7 @@ a:hover {
 }
 .main-form__input {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 18px;
   color: #283645;
   padding: 14px 20px 15px;
   border: 2px solid #e5e5e5;
@@ -2138,7 +2158,8 @@ a:hover {
   border-radius: 50%;
   content: '';
   top: 50%;
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
 }
 .main-form__radio ~ .main-form__label:before {
   height: 35px;
@@ -2185,7 +2206,8 @@ a:hover {
   display: inline-block;
   content: '';
   top: 50%;
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
 }
 .main-form__checkbox ~ .main-form__label:before {
   height: 35px;
@@ -2418,6 +2440,7 @@ a:hover {
     background-position: bottom left 152px;
     min-height: 590px;
     display: block;
+    height: auto;
   }
 
   .download__title{
@@ -2468,17 +2491,21 @@ a:hover {
     margin-left: 43px;
     padding-top: 105px;
     padding-bottom: 25px;
+    -ms-flex: 1;
+    flex: 1;
   }
 
   .advantages__image{
     padding-top: 40px;
     margin: 0;
-    max-height: initial;
+    max-height: inherit;
     overflow: initial;
   }
 
   .advantages-text{
     text-align: left;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 
   .advantages-text__title{
@@ -2510,6 +2537,8 @@ a:hover {
   .review + .slick-slide{
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .review__author{
@@ -2550,6 +2579,8 @@ a:hover {
     padding: 6px 15px 7px;
     -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .pricing-taxes__cell--left{
@@ -2687,7 +2718,7 @@ a:hover {
 
   .users-photos__likes--panorama{
     float: right;
-    position: initial;
+    position: static;
   }
 
   .users-photos__likes-icon{
@@ -2786,7 +2817,7 @@ a:hover {
   .main-form__order--achievements{
     -ms-flex-order: 4;
     order: 4;
-    background-color: initial;
+    background-color: inherit;
     padding: 0;
     margin: 0 0 64px;
   }
@@ -2800,7 +2831,7 @@ a:hover {
   .main-form__order--apps{
     -ms-flex-order: 2;
     order: 2;
-    background-color: initial;
+    background-color: inherit;
     padding: 0;
     margin: 0 0 54px;
   }
@@ -2968,9 +2999,9 @@ a:hover {
   }
 
   .main-nav__container.container{
-    width: initial;
-    min-width: initial;
-    margin: initial;
+    width: auto;
+    min-width: auto;
+    margin: 0;
     padding: 0;
   }
 
@@ -3041,7 +3072,7 @@ a:hover {
   }
 
   .advantages-benefits{
-    max-height: initial;
+    max-height: none;
     overflow: initial;
   }
 
@@ -3065,6 +3096,8 @@ a:hover {
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 275px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 
   .advantages-text__image{
@@ -3130,6 +3163,8 @@ a:hover {
   .pricing-taxes__cell{
     font-size: 18px;
     padding: 14px 20px 15px;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .pricing-taxes__cell--title{
@@ -3172,6 +3207,8 @@ a:hover {
     flex-basis: 0;
     text-align: center;
     max-width: 250px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 
   .contacts__data--write{
@@ -3431,11 +3468,11 @@ a:hover {
     display: block;
     overflow: initial;
     padding: 0;
-    min-height: initial;
+    min-height: auto;
   }
 
   .main-nav.container{
-    width: initial;
+    width: auto;
     min-width: initial;
     margin: initial;
     padding: 0;
@@ -3476,20 +3513,26 @@ a:hover {
     border: none;
   }
 
+  .main-form__container > div,
+  .main-form__container > h2{
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
   .hide-tablet{
-    display: none !important;
+    display: none;
   }
 }
 @media all and (max-width: 659px){
 
   .reviews .container{
-    width: initial;
+    width: auto;
     min-width: initial;
     margin: initial;
   }
 
   .prices .container{
-    width: initial;
+    width: auto;
     min-width: initial;
     margin: initial;
     padding: 0;
@@ -3500,6 +3543,6 @@ a:hover {
   }
 
   .hide-mobile{
-    display: none !important;
+    display: none;
   }
 }
