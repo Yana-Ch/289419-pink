@@ -22,7 +22,8 @@ module.exports = function(grunt) {
               "last 2 Chrome versions",
               "last 2 Firefox versions",
               "last 2 Opera versions",
-              "last 2 Edge versions"
+              "last 2 Edge versions",
+              "ie 9"
             ]}),
             require("css-mqpacker")({
               sort: true

@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .main-form__descr {
@@ -123,6 +125,7 @@
 
     .main-form__input-icon {
       margin-bottom: 15px;
+      line-height: 0;
 
       & + .main-form__label {
         margin: 0 0 0 20px;
@@ -185,7 +188,7 @@
 
 .main-form__input {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 18px;
   color: @color-deep-blue;
   padding: 14px 20px 15px;
   border: 2px solid @color-darkgray;
@@ -433,6 +436,7 @@
 
 
   .media-mixin(@break) when (@break = @break-tablet) {
+
     .main-form__descr {
 
       &:first-of-type {
@@ -455,7 +459,7 @@
 
       &--achievements {
         order: 4;
-        background-color: initial;
+        background-color: inherit;
         padding: 0;
         margin: 0 0 64px;
       }
@@ -467,7 +471,7 @@
 
       &--apps {
         order: 2;
-        background-color: initial;
+        background-color: inherit;
         padding: 0;
         margin: 0 0 54px;
       }
@@ -579,6 +583,7 @@
   }
 
   .media-mixin(@break) when (@break = @break-desktop) {
+
     .main-form__container {
       flex-direction: row;
     }
@@ -748,3 +753,9 @@
       margin-bottom: 0;
     }
   }
+@media all and (max-width: (@break-desktop - 1)) {
+  .main-form__container > div,
+  .main-form__container > h2 {
+    flex: 0 0 auto;
+  }
+}
