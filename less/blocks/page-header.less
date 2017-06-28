@@ -30,7 +30,10 @@
   background-image: url(../img/header-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: top center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   padding-top: 73px;
   align-items: center;
   justify-content: center;
@@ -39,6 +42,7 @@
     height: 732px;
     padding-top: 0;
     align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 
@@ -71,7 +75,7 @@
       display: block;
       overflow: initial;
       padding: 0;
-      min-height: initial;
+      min-height: auto;
     }
   }
 
